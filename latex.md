@@ -40,6 +40,7 @@ To produce a visible, typeset document, your LaTeX file is processed by a piece 
 :width: 20%
 :align: right
 ```
+
 The TeX system was developed by the pioneering computer scientist [Don Knuth](https://www.quantamagazine.org/computer-scientist-donald-knuth-cant-stop-telling-stories-20200416/) in the 1970s. LaTeX is an extension of TeX, written by [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport) in the 1980s. 
 
 LaTeX markup is widely used in academic circles for publishing papers and books. The strange casing of letters in the name LaTeX was originally to distinguish it from now defunct softwares such as [TEX](https://en.wikipedia.org/wiki/Text_Executive_Programming_Language).
@@ -61,9 +62,9 @@ The choice of LaTeX or Word depends on the complexity of the document. The more 
 
 ## First LaTeX document
 
-The first step is to create a new LATEX project. You can do this on your own computer by creating a new .tex file; alternatively, you can [start a new project in Overleaf](https://www.overleaf.com/learn/latex/Creating_a_document_in_Overleaf).
+The first step is to [start a new project](https://www.overleaf.com/learn/latex/Creating_a_document_in_Overleaf) in [Overleaf](https://www.overleaf.com)
 
-Let’s start with the simplest working example, which can be opened directly in Overleaf:
+Let’s start with the simplest working example:
 
 
 ```{code-block} latex
@@ -76,24 +77,23 @@ extra parameters or packages included.
 
 This example produces the following output:
 
-```{figure} https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg
----
-width: 100%
-align: center
----
+```{image} https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg
+:width: 100%
+:align: center
 ``` 
+---
 
-You can see that LATEX has automatically indented the first line of the paragraph, taking care of that formatting for you. Let’s have a closer look at what each part of our code does.
+You can see that LaTeX has automatically indented the first line of the paragraph, taking care of that formatting for you. Let’s have a closer look at what each part of our code does.
 
-The first line of code, `\documentclass{article}`, declares the document type known as its class, which controls the overall appearance of the document. Different types of documents require different classes; i.e., a CV/resume will require a different class than a scientific paper which might use the standard LATEX article class. Other types of documents you may be working on may require different classes such as book or report. To get some idea of the many LATEX class types available, visit the relevant page on CTAN (Comprehensive TeX Archive Network).
+The first line of code, `\documentclass{article}`, declares the document type known as its class, which controls the overall appearance of the document. Different types of documents require different classes; i.e., a CV/resume will require a different class than a scientific paper which might use the standard LaTeX article class. Other types of documents you may be working on may require different classes such as book or report. To get some idea of the many LaTeX class types available, visit the relevant page on CTAN (Comprehensive TeX Archive Network).
 
-Having set the document class, our content, known as the body of the document, is written between the `\begin{document}` and `\end{document}` tags. After opening the example above, you can make changes to the text and, when finished, view the resulting typeset PDF by recompiling the document. To do this in Overleaf, simply hit Recompile, as demonstrated in this brief video clip:
+Having set the document class, our content, known as the body of the document, is written between the `\begin{document}` and `\end{document}` tags. After opening the example above, you can make changes to the text and, when finished, view the resulting typeset PDF by recompiling the document. To do this in Overleaf, simply select the green Recompile button. 
 
 Any Overleaf project can be configured to recompile automatically each time it is edited: click the small arrow next to the Recompile button and set Auto Compile to On, as shown in the following screengrab:
 
 ## Preamble
 
-The screengrab above shows Overleaf storing a LATEX document as a file called main.tex: the .tex file extension is, by convention, used when naming files containing your document’s LaTeX code.
+When you create a blank project on Overleaf, the LaTeX document is stored as a file called main.tex: the .tex file extension is, by convention, used when naming files containing your document’s LaTeX code.
 
 The previous example showed how document content was entered after the `\begin{document}` command; however, everything in your `.tex` file appearing _before_ that point is called the _preamble_, which acts as the document’s “setup” section. Within the preamble you define the document class (type) together with specifics such as languages to be used when writing the document; loading _packages_ you would like to use (more on this later), and it is where you’d apply other types of configuration.
 
@@ -117,7 +117,7 @@ The preamble line
 
 `\usepackage{graphicx}`
 
-is an example of loading an external package (here, [`graphicx`](https://ctan.org/pkg/graphicx?lang=en)) to extend LATEX’s capabilities, enabling it to import external graphics files. LATEX packages are discussed in the section Finding and using LATEX packages.
+is an example of loading an external package (here, [`graphicx`](https://ctan.org/pkg/graphicx?lang=en)) to extend LaTeX’s capabilities, enabling it to import external graphics files. LaTeX packages are discussed in the section Finding and using LaTeX packages.
 
 ## Title, Author and Date
 
@@ -146,7 +146,7 @@ We have now added a title, author and date to our first \LaTeX{} document!
 \end{document}
 ```
 
-The preamble and body can now be combined to produce a complete document which can be opened in Overleaf:
+The preamble and body can now be combined to produce a complete document:
 
 ```{code-block} latex
 \documentclass[12pt, letterpaper]{article}
@@ -161,19 +161,19 @@ We have now added a title, author and date to our first \LaTeX{} document!
 
 his example produces the following output:
 
-```{figure} https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg
-width: 100%
-align: center
----
+```{image} https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg
+:width: 100%
+:align: center
 ``` 
+---
 
 ## Basic document structure
 
-Next, we explore abstracts and how to partition a LATEX document into different chapters, sections and paragraphs.
+Next, we explore abstracts and how to partition a LaTeX document into different chapters, sections and paragraphs.
 
 ### Abstracts
 
-Scientific articles usually provide an _abstract_ which is a brief overview/summary of their core topics, or arguments. The next example demonstrates typesetting an abstract using LATEX’s `abstract` environment:
+Scientific articles usually provide an _abstract_ which is a brief overview/summary of their core topics, or arguments. The next example demonstrates typesetting an abstract using LaTeX's `abstract` environment:
 
 ``` {code-block} latex
 \documentclass{article}
@@ -226,15 +226,11 @@ This example produces the following output:
 :align: center
 ```
 
-Note how LATEX automatically indents paragraphs—except immediately after document headings such as section and subsection—as we will see.
+---
 
-New users are advised that multiple `\\` or `\newlines` should not used to “simulate” paragraphs with larger spacing between them because this can interfere with LATEX’s typesetting algorithms. The recommended method is to continue using blank lines for creating new paragraphs, without any `\\`, and load the `parskip` package by adding `\usepackage{parskip}` to the preamble.
+Note how LaTeX automatically indents paragraphs—except immediately after document headings such as section and subsection—as we will see.
 
-Further information on paragraphs can be found in the following articles:
-
-* [Paragraphs and new lines]()
-* [How to change paragraph spacing in LaTeX]()
-* [LaTeX Error: There's no line here to end]() provides additional advice and guidance on using \\.
+New users are advised that multiple `\\` or `\newlines` should not used to “simulate” paragraphs with larger spacing between them because this can interfere with LaTeX's typesetting algorithms. The recommended method is to continue using blank lines for creating new paragraphs, without any `\\`.
 
 ### Chapters and sections
 
@@ -279,6 +275,8 @@ This example produces the following output:
 :align: center
 ```
 
+---
+
 The names of sectioning commands are mostly self-explanatory; for example, `\chapter{First Chapter}` creates a new chapter titled First Chapter, `\section{Introduction}` produces a section titled Introduction, and so forth. Sections can be further divided into `\subsection{...}` and even `\subsubsection{...}`. The numbering of sections, subsections etc. is automatic but can be disabled by using the so-called _starred version_ of the appropriate command which has an asterisk (*) at the end, such as `\section*{...}` and `\subsection*{...}`.
 
 Collectively, LaTeX document classes provide the following sectioning commands, with specific classes each supporting a relevant subset:
@@ -298,9 +296,9 @@ Visit the Overleaf article article about sections and chapters for further infor
 
 ## Comments
 
-LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A LATEX comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.
+LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A LaTeX comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.
 
-To make a comment in LATEX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:
+To make a comment in LaTeX, simply write a `%` symbol at the beginning of the line, as shown in the following code which uses the example above:
 
 ``` {code-block} latex
 \documentclass[12pt, letterpaper]{article}
@@ -334,11 +332,12 @@ were made by \textbf{\textit{accident}}.
 ```
 This example produces the following output:
 
-```{figure} https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg
-width: 100%
-align: center
----
+```{image} https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg
+:width: 100%
+:align: center
 ``` 
+
+---
 
 Another very useful command is `\emph{argument}`, whose effect on its _argument_ depends on the context. Inside normal text, the emphasized text is italicized, but this behaviour is reversed if used inside an italicized text—see the next example:
 
@@ -363,7 +362,7 @@ This example produces the following output:
 
 ## Lists
 
-You can create different types of list using _environments_, which are used to encapsulate the LATEX code required to implement a specific typesetting feature. An environment starts with `\begin{environment-name}` and ends with `\end{environment-name}` where environment-name might be `figure`, `tabular` or one of the list types: `itemize` for unordered lists or `enumerate` for ordered lists.
+You can create different types of list using _environments_, which are used to encapsulate the LaTeX code required to implement a specific typesetting feature. An environment starts with `\begin{environment-name}` and ends with `\end{environment-name}` where environment-name might be `figure`, `tabular` or one of the list types: `itemize` for unordered lists or `enumerate` for ordered lists.
 
 ### Unordered lists
 
@@ -407,166 +406,16 @@ This example produces the following output:
 :align: center
 ```
 
+---
+
 As with unordered lists, each entry must be preceded by the `\item` command which, here, automatically generates the numeric ordered-list label value, starting at 1.
 
-For further information you can open this  larger Overleaf project which demonstrates various types of LATEX list or visit our dedicated [help article on LATEX lists](https://www.overleaf.com/learn/latex/Lists), which provides many more examples and shows how to create customized lists.
+For further information you can open this  larger Overleaf project which demonstrates various types of LaTeX list or visit our dedicated [help article on LaTeX lists](https://www.overleaf.com/learn/latex/Lists), which provides many more examples and shows how to create customized lists.
 
-
-## Figures
-
-In this section we will now look at how to add images to a LATEX document—note that you need to upload images to your Overleaf project.
-
-The following example demonstrates how to include a picture:
-
-``` {code-block} latex
-\documentclass{article}
-\usepackage{graphicx} %LaTeX package to import graphics
-\graphicspath{{images/}} %configuring the graphicx package
- 
-\begin{document}
-The universe is immense and it seems to be homogeneous, 
-on a large scale, everywhere we look.
-
-% The \includegraphcs command is 
-% provided (implemented) by the 
-% graphicx package
-\includegraphics{universe}  
- 
-There's a picture of a galaxy above.
-\end{document}
-```
-
-This example produces the following output:
-
-```{image} https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg
-:width: 100%
-:align: center
-```
-
-Importing graphics into a LATEX document needs [an add-on package](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages) which provides the commands and features required to include external graphics files. The above example loads the [graphicx package](https://ctan.org/pkg/graphicx?lang=en) which, among many other commands, provides `\includegraphics{...}` to import graphics and `\graphicspath{...}` to advise LATEX where the graphics are located.
-
-To use the `graphicx` package, include the following line in your Overleaf document preamble:
-
-```{code-block} latex
-\usepackage{graphicx}
-```
-
-In our example the command `\graphicspath{{images/}}` informs LATEX that images are kept in a folder named images, which is contained in the current directory:
-
-```{image} https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c4/LL30fig6.png
-:width: 100%
-:align: center
-```
-
-The `\includegraphics{universe}` command does the actual work of inserting the image in the document. Here, universe is the name of the image file but without its extension.
-
-**Note**:
-
-* Although the full file name, including its extension, is allowed in the `\includegraphics` command, it’s considered best practice to omit the file extension because it will prompt LaTeX to search for all the supported formats.
-* Generally, the graphic’s file name should not contain white spaces or multiple dots; it is also recommended to use lowercase letters for the file extension when uploading image files to Overleaf.
-
-More information on LATEX packages can be found at the end of this tutorial in the section [Finding and using LaTeX packages](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages).
-
-#### Captions, labels and references
-
-Images can be captioned, labelled and referenced by means of the figure environment, as shown below:
-
-``` {code-block} latex
-
-\documentclass{article}
-\usepackage{graphicx}
-\graphicspath{{images/}}
- 
-\begin{document}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.75\textwidth]{mesh}
-    \caption{A nice plot.}
-    \label{fig:mesh1}
-\end{figure}
- 
-As you can see in figure \ref{fig:mesh1}, the function grows near the origin. This example is on page \pageref{fig:mesh1}.
-
-\end{document}
-
-```
-
-This example produces the following output:
-
-```{image} https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg
-:width: 100%
-:align: center
-```
-
-There are several noteworthy commands in the example:
-
-* **`\includegraphics[width=0.75\textwidth]{mesh}`**: This form of \includegraphics instructs LATEX to set the figure’s width to 75% of the text width—whose value is stored in the \textwidth command.
-* **`\caption{A nice plot.}`**: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.
-* **`\label{fig:mesh1}`**: To reference this image within your document you give it a label using the \label command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.
-* **`\ref{fig:mesh1}`**: This code will be substituted by the number corresponding to the referenced figure.
-
-Images incorporated in a LATEX document should be placed inside a `figure` environment, or similar, so that LATEX can automatically position the image at a suitable location in your document.
-
-Further guidance is contained in the following Overleaf help articles:
-
-* [Positioning of Figures](https://www.overleaf.com/learn/latex/Positioning_of_Figures)
-* [Inserting Images](https://www.overleaf.com/learn/latex/Inserting_Images)
-
-### Subfigures 
-
-You may want to include some slightly more complicated figures with multiple images. You can do this using `subfigure` environments inside a `figure` environment. Before we can do this though, we need to load up the `caption` and `subcaption` packages:
-
-```{code} latex
-\usepackage{caption}
-\usepackage{subcaption}
-```
-
-We'll do an example with three images along side each other with separate captions and labels. Here's some example code:
-
-```{code} latex
-\begin{figure}
-     \centering
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{graph1}
-         \caption{$y=x$}
-         \label{fig:y equals x}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{graph2}
-         \caption{$y=3\sin x$}
-         \label{fig:three sin x}
-     \end{subfigure}
-     \hfill
-     \begin{subfigure}[b]{0.3\textwidth}
-         \centering
-         \includegraphics[width=\textwidth]{graph3}
-         \caption{$y=5/x$}
-         \label{fig:five over x}
-     \end{subfigure}
-        \caption{Three simple graphs}
-        \label{fig:three graphs}
-\end{figure}
-```
-To start with, we create a new figure, centre it and then create a new subfigure. In the `subfigure` command we need to add a placement specifier and then give it a width. Because we want three images next to each other we set a width of 0.3 times the value of `\textwidth`. You need to make sure that the sum of the widths you specify for the subfigures is less than the text width if you want them all on the same line.
-
-When we add the image in we need to specify the width using `width=` followed by the `\textwidth` command. The reason this works is because the text width within the subfigure is the width we specified in the `\begin{subfigure}` command, i.e. 0.3 times the normal text width (which is the value of `\textwidth`).
-
-Next we give the subfigure a separate caption and label. We can then end the subfigure and add the next two in. To add some spacing between the figures we'll use the `\hfill` command. If you didn't want them all on the same line you could just leave blank lines instead of the `\hfill` commands. Please note that the indents I have used do not affect the how the code is processed, they just make it more readable. The beauty of these subfigures is that we can refer to each of them individually in the text due to their individual labels—but we can also give the whole figure a caption and label.
-
-This is what our figure will look like in the document:
-
-```{image} https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/58/Thesisthree.png
-:width: 70%
-:align: center
-```
 
 ## Math Equations
 
-One of the main advantages of LATEX is the ease with which mathematical expressions can be written. LATEX provides two writing modes for typesetting mathematics:
+One of the main advantages of LaTeX is the ease with which mathematical expressions can be written. LaTeX provides two writing modes for typesetting mathematics:
 
 * _inline_ math mode used for writing formulas that are part of a paragraph
 * _display_ math mode used to write expressions that are not part of a text or paragraph and are typeset on separate lines
@@ -634,14 +483,169 @@ This example produces the following output:
 :align: center
 ```
 
-To typeset display-mode math you can use one of these delimiter pairs: `\[ ... \]`, `\begin{displaymath} ... \end{displaymath}` or `\begin{equation} ... \end{equation}`. Historically, typesetting display-mode math required use of $$ characters delimiters, as in $$ ... display math here ...$$, but this method is [no longer recommended](https://texfaq.org/FAQ-dolldoll): use LaTeX’s delimiters \[ ... \] instead.
+To typeset display-mode math you can use one of these delimiter pairs: `\[ ... \]`, `\begin{displaymath} ... \end{displaymath}` or `\begin{equation} ... \end{equation}`. Historically, typesetting display-mode math required use of `$$` characters delimiters, as in `$$ ... display math here ...$$`, but this method is [no longer recommended](https://texfaq.org/FAQ-dolldoll): use LaTeX’s delimiters `\[ ... \]` instead.
 
 The possibilities with math in LaTeX are endless so be sure to visit Overleaf's help pages for advice and examples on specific topics.
+
+
+## Figures
+
+In this section we will now look at how to add images to a LaTeX document—note that you need to upload images to your Overleaf project.
+
+The following example demonstrates how to include a picture:
+
+``` {code-block} latex
+\documentclass{article}
+\usepackage{graphicx} %LaTeX package to import graphics
+\graphicspath{{images/}} %configuring the graphicx package
+ 
+\begin{document}
+The universe is immense and it seems to be homogeneous, 
+on a large scale, everywhere we look.
+
+% The \includegraphcs command is 
+% provided (implemented) by the 
+% graphicx package
+\includegraphics{universe}  
+ 
+There's a picture of a galaxy above.
+\end{document}
+```
+
+This example produces the following output:
+
+```{image} https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg
+:width: 100%
+:align: center
+```
+--- 
+
+Importing graphics into a LaTeX document needs [an add-on package](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages) which provides the commands and features required to include external graphics files. The above example loads the [graphicx package](https://ctan.org/pkg/graphicx?lang=en) which, among many other commands, provides `\includegraphics{...}` to import graphics and `\graphicspath{...}` to advise LaTeX where the graphics are located.
+
+To use the `graphicx` package, include the following line in your Overleaf document preamble:
+
+```{code-block} latex
+\usepackage{graphicx}
+```
+
+In our example the command `\graphicspath{{images/}}` informs LaTeX that images are kept in a folder named images, which is contained in the current directory:
+
+```{image} https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c4/LL30fig6.png
+:width: 100%
+:align: center
+```
+---
+
+The `\includegraphics{universe}` command does the actual work of inserting the image in the document. Here, universe is the name of the image file but without its extension.
+
+**Note**:
+
+* Although the full file name, including its extension, is allowed in the `\includegraphics` command, it’s considered best practice to omit the file extension because it will prompt LaTeX to search for all the supported formats.
+* Generally, the graphic’s file name should not contain white spaces or multiple dots; it is also recommended to use lowercase letters for the file extension when uploading image files to Overleaf.
+
+More information on LaTeX packages can be found at the end of this tutorial in the section [Finding and using LaTeX packages](https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages).
+
+#### Captions, labels and references
+
+Images can be captioned, labelled and referenced by means of the figure environment, as shown below:
+
+``` {code-block} latex
+
+\documentclass{article}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+ 
+\begin{document}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\textwidth]{mesh}
+    \caption{A nice plot.}
+    \label{fig:mesh1}
+\end{figure}
+ 
+As you can see in figure \ref{fig:mesh1}, the function grows near the origin. This example is on page \pageref{fig:mesh1}.
+
+\end{document}
+
+```
+
+This example produces the following output:
+
+```{image} https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg
+:width: 100%
+:align: center
+```
+
+There are several noteworthy commands in the example:
+
+* **`\includegraphics[width=0.75\textwidth]{mesh}`**: This form of \includegraphics instructs LaTeX to set the figure’s width to 75% of the text width—whose value is stored in the \textwidth command.
+* **`\caption{A nice plot.}`**: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.
+* **`\label{fig:mesh1}`**: To reference this image within your document you give it a label using the \label command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.
+* **`\ref{fig:mesh1}`**: This code will be substituted by the number corresponding to the referenced figure.
+
+Images incorporated in a LaTeX document should be placed inside a `figure` environment, or similar, so that LaTeX can automatically position the image at a suitable location in your document.
+
+Further guidance is contained in the following Overleaf help articles:
+
+* [Positioning of Figures](https://www.overleaf.com/learn/latex/Positioning_of_Figures)
+* [Inserting Images](https://www.overleaf.com/learn/latex/Inserting_Images)
+
+### Subfigures 
+
+You may want to include some slightly more complicated figures with multiple images. You can do this using `subfigure` environments inside a `figure` environment. Before we can do this though, we need to load up the `caption` and `subcaption` packages:
+
+```{code} latex
+\usepackage{caption}
+\usepackage{subcaption}
+```
+
+We'll do an example with three images along side each other with separate captions and labels. Here's some example code:
+
+```{code} latex
+\begin{figure}
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{graph1}
+         \caption{$y=x$}
+         \label{fig:y equals x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{graph2}
+         \caption{$y=3\sin x$}
+         \label{fig:three sin x}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{graph3}
+         \caption{$y=5/x$}
+         \label{fig:five over x}
+     \end{subfigure}
+        \caption{Three simple graphs}
+        \label{fig:three graphs}
+\end{figure}
+```
+To start with, we create a new figure, centre it and then create a new subfigure. In the `subfigure` command we need to add a placement specifier and then give it a width. Because we want three images next to each other we set a width of 0.3 times the value of `\textwidth`. You need to make sure that the sum of the widths you specify for the subfigures is less than the text width if you want them all on the same line.
+
+When we add the image in we need to specify the width using `width=` followed by the `\textwidth` command. The reason this works is because the text width within the subfigure is the width we specified in the `\begin{subfigure}` command, i.e. 0.3 times the normal text width (which is the value of `\textwidth`).
+
+Next we give the subfigure a separate caption and label. We can then end the subfigure and add the next two in. To add some spacing between the figures we'll use the `\hfill` command. If you didn't want them all on the same line you could just leave blank lines instead of the `\hfill` commands. Please note that the indents I have used do not affect the how the code is processed, they just make it more readable. The beauty of these subfigures is that we can refer to each of them individually in the text due to their individual labels—but we can also give the whole figure a caption and label.
+
+This is what our figure will look like in the document:
+
+```{image} https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/58/Thesisthree.png
+:width: 70%
+:align: center
+```
 
 ## Tables 
 
 ``` {tip} 
-Creating tables in LATEX can be time-consuming so you may want to use the **[TablesGenerator.com](http://tablesgenerator.com)** online tool to export LATEX code for tabulars.
+Creating tables in LaTeX can be time-consuming so you may want to use the **[TablesGenerator.com](http://tablesgenerator.com)** online tool to export LaTeX code for tabulars.
 ```
 
 The following examples show how to create tables in LaTeX, including the addition of lines (rules) and captions.
@@ -668,7 +672,7 @@ This example produces the following output:
 ```
 ---
 
-The `tabular` environment is the default LATEX method to create tables. You must specify a parameter to this environment, in this case `{c c c}` which advises LATEX that there will be three columns and the text inside each one must be centred. You can also use `r` to right-align the text and `l` to left-align it. The alignment symbol & is used to demarcate individual table cells within a table row. To end a table row use the _new line_ command `\\`. Our table is contained within a center environment to make it centred within the text width of the page.
+The `tabular` environment is the default LaTeX method to create tables. You must specify a parameter to this environment, in this case `{c c c}` which advises LaTeX that there will be three columns and the text inside each one must be centred. You can also use `r` to right-align the text and `l` to left-align it. The alignment symbol & is used to demarcate individual table cells within a table row. To end a table row use the _new line_ command `\\`. Our table is contained within a center environment to make it centred within the text width of the page.
 
 #### Adding borders 
 
