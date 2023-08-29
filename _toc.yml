@@ -1,0 +1,28 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+  # - caption: Markup Languages
+    # numbered: true
+  #   chapters:
+  #   - file: latex
+  #     # sections: 
+  #     #     - file: 1_programming/pandas1
+  #   - file: html
+  #   - file: markdown
+  #   - file: xml
+  # - caption: Version Control Systems
+  #   numbered: true
+  #   chapters:
+  #   - file: git
+  #     # sections: 
+  #     #     - file: 1_programming/pandas1
+  #   - file: github
+  #   - file: markdown
+  #   - file: xml
+# - file: git
+# - file: docker
+# - file: bash
+- file: latex
