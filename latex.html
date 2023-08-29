@@ -321,14 +321,14 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-lists">Ordered lists</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#captions-labels-and-references">Captions, labels and references</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subfigures">Subfigures</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-equations">Math Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-math-mode">Inline math mode</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display-math-mode">Display math mode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#captions-labels-and-references">Captions, labels and references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subfigures">Subfigures</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a><ul class="nav section-nav flex-column">
@@ -386,8 +386,8 @@ document.write(`
 </section>
 <section id="first-latex-document">
 <h2>First LaTeX document<a class="headerlink" href="#first-latex-document" title="Permalink to this headline">#</a></h2>
-<p>The first step is to create a new LATEX project. You can do this on your own computer by creating a new .tex file; alternatively, you can <a class="reference external" href="https://www.overleaf.com/learn/latex/Creating_a_document_in_Overleaf">start a new project in Overleaf</a>.</p>
-<p>Let’s start with the simplest working example, which can be opened directly in Overleaf:</p>
+<p>The first step is to <a class="reference external" href="https://www.overleaf.com/learn/latex/Creating_a_document_in_Overleaf">start a new project</a> in <a class="reference external" href="https://www.overleaf.com">Overleaf</a></p>
+<p>Let’s start with the simplest working example:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 First document. This is a simple example, with no 
@@ -396,17 +396,16 @@ extra parameters or packages included.
 </pre></div>
 </div>
 <p>This example produces the following output:</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg" src="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg" width="100%" /></a>
-</figure>
-<p>You can see that LATEX has automatically indented the first line of the paragraph, taking care of that formatting for you. Let’s have a closer look at what each part of our code does.</p>
-<p>The first line of code, <code class="docutils literal notranslate"><span class="pre">\documentclass{article}</span></code>, declares the document type known as its class, which controls the overall appearance of the document. Different types of documents require different classes; i.e., a CV/resume will require a different class than a scientific paper which might use the standard LATEX article class. Other types of documents you may be working on may require different classes such as book or report. To get some idea of the many LATEX class types available, visit the relevant page on CTAN (Comprehensive TeX Archive Network).</p>
-<p>Having set the document class, our content, known as the body of the document, is written between the <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> and <code class="docutils literal notranslate"><span class="pre">\end{document}</span></code> tags. After opening the example above, you can make changes to the text and, when finished, view the resulting typeset PDF by recompiling the document. To do this in Overleaf, simply hit Recompile, as demonstrated in this brief video clip:</p>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/5oBbZABsWEnHZpwhfvV2PD/95ba7d5496616b4f10dffe6fb90f578a/LL30Fig1-plain.svg" width="100%" /></a>
+<hr class="docutils" />
+<p>You can see that LaTeX has automatically indented the first line of the paragraph, taking care of that formatting for you. Let’s have a closer look at what each part of our code does.</p>
+<p>The first line of code, <code class="docutils literal notranslate"><span class="pre">\documentclass{article}</span></code>, declares the document type known as its class, which controls the overall appearance of the document. Different types of documents require different classes; i.e., a CV/resume will require a different class than a scientific paper which might use the standard LaTeX article class. Other types of documents you may be working on may require different classes such as book or report. To get some idea of the many LaTeX class types available, visit the relevant page on CTAN (Comprehensive TeX Archive Network).</p>
+<p>Having set the document class, our content, known as the body of the document, is written between the <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> and <code class="docutils literal notranslate"><span class="pre">\end{document}</span></code> tags. After opening the example above, you can make changes to the text and, when finished, view the resulting typeset PDF by recompiling the document. To do this in Overleaf, simply select the green Recompile button.</p>
 <p>Any Overleaf project can be configured to recompile automatically each time it is edited: click the small arrow next to the Recompile button and set Auto Compile to On, as shown in the following screengrab:</p>
 </section>
 <section id="preamble">
 <h2>Preamble<a class="headerlink" href="#preamble" title="Permalink to this headline">#</a></h2>
-<p>The screengrab above shows Overleaf storing a LATEX document as a file called main.tex: the .tex file extension is, by convention, used when naming files containing your document’s LaTeX code.</p>
+<p>When you create a blank project on Overleaf, the LaTeX document is stored as a file called main.tex: the .tex file extension is, by convention, used when naming files containing your document’s LaTeX code.</p>
 <p>The previous example showed how document content was entered after the <code class="docutils literal notranslate"><span class="pre">\begin{document}</span></code> command; however, everything in your <code class="docutils literal notranslate"><span class="pre">.tex</span></code> file appearing <em>before</em> that point is called the <em>preamble</em>, which acts as the document’s “setup” section. Within the preamble you define the document class (type) together with specifics such as languages to be used when writing the document; loading <em>packages</em> you would like to use (more on this later), and it is where you’d apply other types of configuration.</p>
 <p>A minimal document preamble might look like this:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
@@ -422,7 +421,7 @@ extra parameters or packages included.
 <p>Of course other font sizes, 9pt, 11pt, 12pt, can be used, but if none is specified, the default size is 10pt. As for the paper size, other possible values are <code class="docutils literal notranslate"><span class="pre">a4paper</span></code> and <code class="docutils literal notranslate"><span class="pre">legalpaper</span></code>. For further information see the article about page size and margins.</p>
 <p>The preamble line</p>
 <p><code class="docutils literal notranslate"><span class="pre">\usepackage{graphicx}</span></code></p>
-<p>is an example of loading an external package (here, <a class="reference external" href="https://ctan.org/pkg/graphicx?lang=en"><code class="docutils literal notranslate"><span class="pre">graphicx</span></code></a>) to extend LATEX’s capabilities, enabling it to import external graphics files. LATEX packages are discussed in the section Finding and using LATEX packages.</p>
+<p>is an example of loading an external package (here, <a class="reference external" href="https://ctan.org/pkg/graphicx?lang=en"><code class="docutils literal notranslate"><span class="pre">graphicx</span></code></a>) to extend LaTeX’s capabilities, enabling it to import external graphics files. LaTeX packages are discussed in the section Finding and using LaTeX packages.</p>
 </section>
 <section id="title-author-and-date">
 <h2>Title, Author and Date<a class="headerlink" href="#title-author-and-date" title="Permalink to this headline">#</a></h2>
@@ -450,7 +449,7 @@ We have now added a title, author and date to our first <span class="k">\LaTeX</
 <span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
 </pre></div>
 </div>
-<p>The preamble and body can now be combined to produce a complete document which can be opened in Overleaf:</p>
+<p>The preamble and body can now be combined to produce a complete document:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\title</span><span class="nb">{</span>My first LaTeX document<span class="nb">}</span>
 <span class="k">\author</span><span class="nb">{</span>Hubert Farnsworth<span class="k">\thanks</span><span class="nb">{</span>Funded by the Overleaf team.<span class="nb">}}</span>
@@ -462,15 +461,15 @@ We have now added a title, author and date to our first <span class="k">\LaTeX</
 </pre></div>
 </div>
 <p>his example produces the following output:</p>
-<figure class="align-default">
-<img alt="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg" src="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg" /></figure>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/3WzMd0bx2zlj3zLTKS8SxT/dc2b7c16adbc96bdd750b6d2c8b4227e/LL30Fig2r-plain.svg" width="100%" /></a>
 </section>
+<hr class="docutils" />
 <section id="basic-document-structure">
 <h2>Basic document structure<a class="headerlink" href="#basic-document-structure" title="Permalink to this headline">#</a></h2>
-<p>Next, we explore abstracts and how to partition a LATEX document into different chapters, sections and paragraphs.</p>
+<p>Next, we explore abstracts and how to partition a LaTeX document into different chapters, sections and paragraphs.</p>
 <section id="abstracts">
 <h3>Abstracts<a class="headerlink" href="#abstracts" title="Permalink to this headline">#</a></h3>
-<p>Scientific articles usually provide an <em>abstract</em> which is a brief overview/summary of their core topics, or arguments. The next example demonstrates typesetting an abstract using LATEX’s <code class="docutils literal notranslate"><span class="pre">abstract</span></code> environment:</p>
+<p>Scientific articles usually provide an <em>abstract</em> which is a brief overview/summary of their core topics, or arguments. The next example demonstrates typesetting an abstract using LaTeX’s <code class="docutils literal notranslate"><span class="pre">abstract</span></code> environment:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
 <span class="k">\begin</span><span class="nb">{</span>abstract<span class="nb">}</span>
@@ -509,14 +508,9 @@ I will start the third paragraph and then add <span class="k">\\</span> a manual
 </div>
 <p>This example produces the following output:</p>
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/5DdSH06hFli8k4lR0dxw4m/a55cddf9aa10b64302ae7b72ba0c6447/LL30Fig15r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/5DdSH06hFli8k4lR0dxw4m/a55cddf9aa10b64302ae7b72ba0c6447/LL30Fig15r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/5DdSH06hFli8k4lR0dxw4m/a55cddf9aa10b64302ae7b72ba0c6447/LL30Fig15r-plain.svg" width="100%" /></a>
-<p>Note how LATEX automatically indents paragraphs—except immediately after document headings such as section and subsection—as we will see.</p>
-<p>New users are advised that multiple <code class="docutils literal notranslate"><span class="pre">\\</span></code> or <code class="docutils literal notranslate"><span class="pre">\newlines</span></code> should not used to “simulate” paragraphs with larger spacing between them because this can interfere with LATEX’s typesetting algorithms. The recommended method is to continue using blank lines for creating new paragraphs, without any <code class="docutils literal notranslate"><span class="pre">\\</span></code>, and load the <code class="docutils literal notranslate"><span class="pre">parskip</span></code> package by adding <code class="docutils literal notranslate"><span class="pre">\usepackage{parskip}</span></code> to the preamble.</p>
-<p>Further information on paragraphs can be found in the following articles:</p>
-<ul class="simple">
-<li><p><span class="xref myst">Paragraphs and new lines</span></p></li>
-<li><p><span class="xref myst">How to change paragraph spacing in LaTeX</span></p></li>
-<li><p><span class="xref myst">LaTeX Error: There’s no line here to end</span> provides additional advice and guidance on using .</p></li>
-</ul>
+<hr class="docutils" />
+<p>Note how LaTeX automatically indents paragraphs—except immediately after document headings such as section and subsection—as we will see.</p>
+<p>New users are advised that multiple <code class="docutils literal notranslate"><span class="pre">\\</span></code> or <code class="docutils literal notranslate"><span class="pre">\newlines</span></code> should not used to “simulate” paragraphs with larger spacing between them because this can interfere with LaTeX’s typesetting algorithms. The recommended method is to continue using blank lines for creating new paragraphs, without any <code class="docutils literal notranslate"><span class="pre">\\</span></code>.</p>
 </section>
 <section id="chapters-and-sections">
 <h3>Chapters and sections<a class="headerlink" href="#chapters-and-sections" title="Permalink to this headline">#</a></h3>
@@ -553,6 +547,7 @@ Etiam lobortis facilisissem...
 </div>
 <p>This example produces the following output:</p>
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/1A1T7YsurQdM058OwmLqd8/7f6e962c31356bafa702bab9062f6061/LL30Fig16-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/1A1T7YsurQdM058OwmLqd8/7f6e962c31356bafa702bab9062f6061/LL30Fig16-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/1A1T7YsurQdM058OwmLqd8/7f6e962c31356bafa702bab9062f6061/LL30Fig16-plain.svg" width="100%" /></a>
+<hr class="docutils" />
 <p>The names of sectioning commands are mostly self-explanatory; for example, <code class="docutils literal notranslate"><span class="pre">\chapter{First</span> <span class="pre">Chapter}</span></code> creates a new chapter titled First Chapter, <code class="docutils literal notranslate"><span class="pre">\section{Introduction}</span></code> produces a section titled Introduction, and so forth. Sections can be further divided into <code class="docutils literal notranslate"><span class="pre">\subsection{...}</span></code> and even <code class="docutils literal notranslate"><span class="pre">\subsubsection{...}</span></code>. The numbering of sections, subsections etc. is automatic but can be disabled by using the so-called <em>starred version</em> of the appropriate command which has an asterisk (*) at the end, such as <code class="docutils literal notranslate"><span class="pre">\section*{...}</span></code> and <code class="docutils literal notranslate"><span class="pre">\subsection*{...}</span></code>.</p>
 <p>Collectively, LaTeX document classes provide the following sectioning commands, with specific classes each supporting a relevant subset:</p>
 <ul class="simple">
@@ -570,8 +565,8 @@ Etiam lobortis facilisissem...
 </section>
 <section id="comments">
 <h2>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">#</a></h2>
-<p>LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A LATEX comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.</p>
-<p>To make a comment in LATEX, simply write a % symbol at the beginning of the line, as shown in the following code which uses the example above:</p>
+<p>LaTeX is a form of “program code”, but one which specializes in document typesetting; consequently, as with code written in any other programming language, it can be very useful to include comments within your document. A LaTeX comment is a section of text that will not be typeset or affect the document in any way—often used to add “to do” notes; include explanatory notes; provide in-line explanations of tricky macros or comment-out lines/sections of LaTeX code when debugging.</p>
+<p>To make a comment in LaTeX, simply write a <code class="docutils literal notranslate"><span class="pre">%</span></code> symbol at the beginning of the line, as shown in the following code which uses the example above:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\title</span><span class="nb">{</span>My first LaTeX document<span class="nb">}</span>
 <span class="k">\author</span><span class="nb">{</span>Hubert Farnsworth<span class="k">\thanks</span><span class="nb">{</span>Funded by the Overleaf team.<span class="nb">}}</span>
@@ -601,8 +596,8 @@ were made by <span class="k">\textbf</span><span class="nb">{</span><span class=
 </pre></div>
 </div>
 <p>This example produces the following output:</p>
-<figure class="align-default">
-<img alt="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg" src="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg" /></figure>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/6vo15r0tLCByTpcvn1w2E8/8f14edc7ece1f10ce4ba2c76e1e58a56/LL30Fig3r-plain.svg" width="100%" /></a>
+<hr class="docutils" />
 <p>Another very useful command is <code class="docutils literal notranslate"><span class="pre">\emph{argument}</span></code>, whose effect on its <em>argument</em> depends on the context. Inside normal text, the emphasized text is italicized, but this behaviour is reversed if used inside an italicized text—see the next example:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span>Some of the greatest <span class="k">\emph</span><span class="nb">{</span>discoveries<span class="nb">}</span> in science 
 were made by accident.
@@ -619,7 +614,7 @@ in science were made by accident.<span class="nb">}</span>
 </section>
 <section id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">#</a></h2>
-<p>You can create different types of list using <em>environments</em>, which are used to encapsulate the LATEX code required to implement a specific typesetting feature. An environment starts with <code class="docutils literal notranslate"><span class="pre">\begin{environment-name}</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">\end{environment-name}</span></code> where environment-name might be <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">tabular</span></code> or one of the list types: <code class="docutils literal notranslate"><span class="pre">itemize</span></code> for unordered lists or <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> for ordered lists.</p>
+<p>You can create different types of list using <em>environments</em>, which are used to encapsulate the LaTeX code required to implement a specific typesetting feature. An environment starts with <code class="docutils literal notranslate"><span class="pre">\begin{environment-name}</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">\end{environment-name}</span></code> where environment-name might be <code class="docutils literal notranslate"><span class="pre">figure</span></code>, <code class="docutils literal notranslate"><span class="pre">tabular</span></code> or one of the list types: <code class="docutils literal notranslate"><span class="pre">itemize</span></code> for unordered lists or <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> for ordered lists.</p>
 <section id="unordered-lists">
 <h3>Unordered lists<a class="headerlink" href="#unordered-lists" title="Permalink to this headline">#</a></h3>
 <p>Unordered lists are produced by the itemize environment. Each list entry must be preceded by the \item command, as shown below:</p>
@@ -649,13 +644,67 @@ in science were made by accident.<span class="nb">}</span>
 </div>
 <p>This example produces the following output:</p>
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/2vkfa7RiAIJxv5wIZbg9UK/530c384f159d091a587de279d13fefec/LL30Fig8-plain.svg" width="80%" /></a>
+<hr class="docutils" />
 <p>As with unordered lists, each entry must be preceded by the <code class="docutils literal notranslate"><span class="pre">\item</span></code> command which, here, automatically generates the numeric ordered-list label value, starting at 1.</p>
-<p>For further information you can open this  larger Overleaf project which demonstrates various types of LATEX list or visit our dedicated <a class="reference external" href="https://www.overleaf.com/learn/latex/Lists">help article on LATEX lists</a>, which provides many more examples and shows how to create customized lists.</p>
+<p>For further information you can open this  larger Overleaf project which demonstrates various types of LaTeX list or visit our dedicated <a class="reference external" href="https://www.overleaf.com/learn/latex/Lists">help article on LaTeX lists</a>, which provides many more examples and shows how to create customized lists.</p>
+</section>
+</section>
+<section id="math-equations">
+<h2>Math Equations<a class="headerlink" href="#math-equations" title="Permalink to this headline">#</a></h2>
+<p>One of the main advantages of LaTeX is the ease with which mathematical expressions can be written. LaTeX provides two writing modes for typesetting mathematics:</p>
+<ul class="simple">
+<li><p><em>inline</em> math mode used for writing formulas that are part of a paragraph</p></li>
+<li><p><em>display</em> math mode used to write expressions that are not part of a text or paragraph and are typeset on separate lines</p></li>
+</ul>
+<section id="inline-math-mode">
+<h3>Inline math mode<a class="headerlink" href="#inline-math-mode" title="Permalink to this headline">#</a></h3>
+<p>Let’s see an example of inline math mode:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+In physics, the mass-energy equivalence is stated 
+by the equation <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, discovered in 1905 by Albert Einstein.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>This example produces the following output:</p>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg" width="100%" /></a>
+<hr class="docutils" />
+<p>To typeset inline-mode math you can use one of these delimiter pairs: <code class="docutils literal notranslate"><span class="pre">\(</span> <span class="pre">...</span> <span class="pre">\)</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">...</span> <span class="pre">$</span></code> or <code class="docutils literal notranslate"><span class="pre">\begin{math}</span> <span class="pre">...</span> <span class="pre">\end{math}</span></code>, as demonstrated in the following example:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>math<span class="nb">}</span>
+E=mc<span class="nb">^</span>2
+<span class="k">\end</span><span class="nb">{</span>math<span class="nb">}</span> is typeset in a paragraph using inline math mode---as is <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, and so too is <span class="s">\(</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">\)</span>.
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>This example produces the following output:</p>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg" width="100%" /></a>
+</section>
+<section id="display-math-mode">
+<h3>Display math mode<a class="headerlink" href="#display-math-mode" title="Permalink to this headline">#</a></h3>
+<p>Equations typeset in display mode can be numbered or unnumbered, as in the following example:</p>
+<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
+<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
+The mass-energy equivalence is described by the famous equation
+<span class="sb">\[</span><span class="nb"> E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="nb"> </span><span class="s">\]</span> discovered in 1905 by Albert Einstein. 
+
+In natural units (<span class="s">$</span><span class="nb">c </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span>), the formula expresses the identity
+<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
+E=m
+<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
+<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
+</pre></div>
+</div>
+<p>This example produces the following output:</p>
+<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg" width="100%" /></a>
+<p>To typeset display-mode math you can use one of these delimiter pairs: <code class="docutils literal notranslate"><span class="pre">\[</span> <span class="pre">...</span> <span class="pre">\]</span></code>, <code class="docutils literal notranslate"><span class="pre">\begin{displaymath}</span> <span class="pre">...</span> <span class="pre">\end{displaymath}</span></code> or <code class="docutils literal notranslate"><span class="pre">\begin{equation}</span> <span class="pre">...</span> <span class="pre">\end{equation}</span></code>. Historically, typesetting display-mode math required use of <code class="docutils literal notranslate"><span class="pre">$$</span></code> characters delimiters, as in <code class="docutils literal notranslate"><span class="pre">$$</span> <span class="pre">...</span> <span class="pre">display</span> <span class="pre">math</span> <span class="pre">here</span> <span class="pre">...$$</span></code>, but this method is <a class="reference external" href="https://texfaq.org/FAQ-dolldoll">no longer recommended</a>: use LaTeX’s delimiters <code class="docutils literal notranslate"><span class="pre">\[</span> <span class="pre">...</span> <span class="pre">\]</span></code> instead.</p>
+<p>The possibilities with math in LaTeX are endless so be sure to visit Overleaf’s help pages for advice and examples on specific topics.</p>
 </section>
 </section>
 <section id="figures">
 <h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">#</a></h2>
-<p>In this section we will now look at how to add images to a LATEX document—note that you need to upload images to your Overleaf project.</p>
+<p>In this section we will now look at how to add images to a LaTeX document—note that you need to upload images to your Overleaf project.</p>
 <p>The following example demonstrates how to include a picture:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="nb">{</span>article<span class="nb">}</span>
 <span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span> <span class="c">%LaTeX package to import graphics</span>
@@ -676,20 +725,22 @@ There&#39;s a picture of a galaxy above.
 </div>
 <p>This example produces the following output:</p>
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/4p5toat08FUgehv4yuNwXS/efc9e75e4342c9caeec94f26627fa337/LL30Fig5v2-plain.svg" width="100%" /></a>
-<p>Importing graphics into a LATEX document needs <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages">an add-on package</a> which provides the commands and features required to include external graphics files. The above example loads the <a class="reference external" href="https://ctan.org/pkg/graphicx?lang=en">graphicx package</a> which, among many other commands, provides <code class="docutils literal notranslate"><span class="pre">\includegraphics{...}</span></code> to import graphics and <code class="docutils literal notranslate"><span class="pre">\graphicspath{...}</span></code> to advise LATEX where the graphics are located.</p>
+<hr class="docutils" />
+<p>Importing graphics into a LaTeX document needs <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages">an add-on package</a> which provides the commands and features required to include external graphics files. The above example loads the <a class="reference external" href="https://ctan.org/pkg/graphicx?lang=en">graphicx package</a> which, among many other commands, provides <code class="docutils literal notranslate"><span class="pre">\includegraphics{...}</span></code> to import graphics and <code class="docutils literal notranslate"><span class="pre">\graphicspath{...}</span></code> to advise LaTeX where the graphics are located.</p>
 <p>To use the <code class="docutils literal notranslate"><span class="pre">graphicx</span></code> package, include the following line in your Overleaf document preamble:</p>
 <div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\usepackage</span><span class="nb">{</span>graphicx<span class="nb">}</span>
 </pre></div>
 </div>
-<p>In our example the command <code class="docutils literal notranslate"><span class="pre">\graphicspath{{images/}}</span></code> informs LATEX that images are kept in a folder named images, which is contained in the current directory:</p>
+<p>In our example the command <code class="docutils literal notranslate"><span class="pre">\graphicspath{{images/}}</span></code> informs LaTeX that images are kept in a folder named images, which is contained in the current directory:</p>
 <a class="reference internal image-reference" href="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c4/LL30fig6.png"><img alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c4/LL30fig6.png" class="align-center" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/c/c4/LL30fig6.png" style="width: 100%;" /></a>
+<hr class="docutils" />
 <p>The <code class="docutils literal notranslate"><span class="pre">\includegraphics{universe}</span></code> command does the actual work of inserting the image in the document. Here, universe is the name of the image file but without its extension.</p>
 <p><strong>Note</strong>:</p>
 <ul class="simple">
 <li><p>Although the full file name, including its extension, is allowed in the <code class="docutils literal notranslate"><span class="pre">\includegraphics</span></code> command, it’s considered best practice to omit the file extension because it will prompt LaTeX to search for all the supported formats.</p></li>
 <li><p>Generally, the graphic’s file name should not contain white spaces or multiple dots; it is also recommended to use lowercase letters for the file extension when uploading image files to Overleaf.</p></li>
 </ul>
-<p>More information on LATEX packages can be found at the end of this tutorial in the section <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages">Finding and using LaTeX packages</a>.</p>
+<p>More information on LaTeX packages can be found at the end of this tutorial in the section <a class="reference external" href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes#Finding_and_using_LaTeX_packages">Finding and using LaTeX packages</a>.</p>
 <section id="captions-labels-and-references">
 <h3>Captions, labels and references<a class="headerlink" href="#captions-labels-and-references" title="Permalink to this headline">#</a></h3>
 <p>Images can be captioned, labelled and referenced by means of the figure environment, as shown below:</p>
@@ -715,12 +766,12 @@ As you can see in figure <span class="k">\ref</span><span class="nb">{</span>fig
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/4DkAWWkQqZP6QHU2EErogQ/9aa2371f2cde0f3f8bf22aa1c0b91789/LL30Fig6r-plain.svg" width="100%" /></a>
 <p>There are several noteworthy commands in the example:</p>
 <ul class="simple">
-<li><p><strong><code class="docutils literal notranslate"><span class="pre">\includegraphics[width=0.75\textwidth]{mesh}</span></code></strong>: This form of \includegraphics instructs LATEX to set the figure’s width to 75% of the text width—whose value is stored in the \textwidth command.</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">\includegraphics[width=0.75\textwidth]{mesh}</span></code></strong>: This form of \includegraphics instructs LaTeX to set the figure’s width to 75% of the text width—whose value is stored in the \textwidth command.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">\caption{A</span> <span class="pre">nice</span> <span class="pre">plot.}</span></code></strong>: As its name suggests, this command sets the figure caption which can be placed above or below the figure. If you create a list of figures this caption will be used in that list.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">\label{fig:mesh1}</span></code></strong>: To reference this image within your document you give it a label using the \label command. The label is used to generate a number for the image and, combined with the next command, will allow you to reference it.</p></li>
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">\ref{fig:mesh1}</span></code></strong>: This code will be substituted by the number corresponding to the referenced figure.</p></li>
 </ul>
-<p>Images incorporated in a LATEX document should be placed inside a <code class="docutils literal notranslate"><span class="pre">figure</span></code> environment, or similar, so that LATEX can automatically position the image at a suitable location in your document.</p>
+<p>Images incorporated in a LaTeX document should be placed inside a <code class="docutils literal notranslate"><span class="pre">figure</span></code> environment, or similar, so that LaTeX can automatically position the image at a suitable location in your document.</p>
 <p>Further guidance is contained in the following Overleaf help articles:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.overleaf.com/learn/latex/Positioning_of_Figures">Positioning of Figures</a></p></li>
@@ -769,76 +820,11 @@ As you can see in figure <span class="k">\ref</span><span class="nb">{</span>fig
 <a class="reference internal image-reference" href="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/58/Thesisthree.png"><img alt="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/58/Thesisthree.png" class="align-center" src="https://sharelatex-wiki-cdn-671420.c.cdn77.org/learn-scripts/images/5/58/Thesisthree.png" style="width: 70%;" /></a>
 </section>
 </section>
-<section id="math-equations">
-<h2>Math Equations<a class="headerlink" href="#math-equations" title="Permalink to this headline">#</a></h2>
-<p>One of the main advantages of LATEX is the ease with which mathematical expressions can be written. LATEX provides two writing modes for typesetting mathematics:</p>
-<ul class="simple">
-<li><p><em>inline</em> math mode used for writing formulas that are part of a paragraph</p></li>
-<li><p><em>display</em> math mode used to write expressions that are not part of a text or paragraph and are typeset on separate lines</p></li>
-</ul>
-<section id="inline-math-mode">
-<h3>Inline math mode<a class="headerlink" href="#inline-math-mode" title="Permalink to this headline">#</a></h3>
-<p>Let’s see an example of inline math mode:</p>
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-In physics, the mass-energy equivalence is stated 
-by the equation <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, discovered in 1905 by Albert Einstein.
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</pre></div>
-</div>
-<p>This example produces the following output:</p>
-<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/77oK8pfew1B1VvxiBtALag/15714f2da4e469bbb8cf70a0d3733e5d/LL30Fig9-plain.svg" width="100%" /></a>
-<p>To typeset inline-mode math you can use one of these delimiter pairs: <code class="docutils literal notranslate"><span class="pre">\(</span> <span class="pre">...</span> <span class="pre">\)</span></code>, <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">...</span> <span class="pre">$</span></code> or <code class="docutils literal notranslate"><span class="pre">\begin{math}</span> <span class="pre">...</span> <span class="pre">\end{math}</span></code>, as demonstrated in the following example:</p>
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>math<span class="nb">}</span>
-E=mc<span class="nb">^</span>2
-<span class="k">\end</span><span class="nb">{</span>math<span class="nb">}</span> is typeset in a paragraph using inline math mode---as is <span class="s">$</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">$</span>, and so too is <span class="s">\(</span><span class="nb">E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="s">\)</span>.
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</pre></div>
-</div>
-<p>This example produces the following output:</p>
-<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/46VPfEGxYJ3di18TLzaLo9/ed67df07532c52b6543fd2bae7cb7c04/LL30Fig10r-plain.svg" width="100%" /></a>
-</section>
-<section id="display-math-mode">
-<h3>Display math mode<a class="headerlink" href="#display-math-mode" title="Permalink to this headline">#</a></h3>
-<p>Equations typeset in display mode can be numbered or unnumbered, as in the following example:</p>
-<div class="highlight-latex notranslate"><div class="highlight"><pre><span></span><span class="k">\documentclass</span><span class="na">[12pt, letterpaper]</span><span class="nb">{</span>article<span class="nb">}</span>
-<span class="k">\begin</span><span class="nb">{</span>document<span class="nb">}</span>
-The mass-energy equivalence is described by the famous equation
-<span class="sb">\[</span><span class="nb"> E</span><span class="o">=</span><span class="nb">mc^</span><span class="m">2</span><span class="nb"> </span><span class="s">\]</span> discovered in 1905 by Albert Einstein. 
-
-In natural units (<span class="s">$</span><span class="nb">c </span><span class="o">=</span><span class="nb"> </span><span class="m">1</span><span class="s">$</span>), the formula expresses the identity
-<span class="k">\begin</span><span class="nb">{</span>equation<span class="nb">}</span>
-E=m
-<span class="k">\end</span><span class="nb">{</span>equation<span class="nb">}</span>
-<span class="k">\end</span><span class="nb">{</span>document<span class="nb">}</span>
-</pre></div>
-</div>
-<p>This example produces the following output:</p>
-<a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/6n1FPYFzmzCHPpWoEoYQZM/79b33f1096be06326bff7d2e1976c67c/LL30Fig11-plain.svg" width="100%" /></a>
-<p>To typeset display-mode math you can use one of these delimiter pairs: [ … ], \begin{displaymath} … \end{displaymath} or \begin{equation} … \end{equation}. Historically, typesetting display-mode math required use of $<span class="math notranslate nohighlight">\( characters delimiters, as in \)</span><span class="math notranslate nohighlight">\( ... display math here ...\)</span>$, but this method is <a class="reference external" href="https://texfaq.org/FAQ-dolldoll">no longer recommended</a>: use LaTeX’s delimiters [ … ] instead.</p>
-<p>The possibilities with math in LATEX are endless so be sure to visit our help pages for advice and examples on specific topics:</p>
-<ul class="simple">
-<li><p>Mathematical expressions</p></li>
-<li><p>Subscripts and superscripts</p></li>
-<li><p>Brackets and Parentheses</p></li>
-<li><p>Fractions and Binomials</p></li>
-<li><p>Aligning Equations</p></li>
-<li><p>Operators</p></li>
-<li><p>Spacing in math mode</p></li>
-<li><p>Integrals, sums and limits</p></li>
-<li><p>Display style in math mode</p></li>
-<li><p>List of Greek letters and math symbols</p></li>
-<li><p>Mathematical fonts</p></li>
-</ul>
-</section>
-</section>
 <section id="tables">
 <h2>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">#</a></h2>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Creating tables in LATEX can be time-consuming so you may want to use the <strong><a class="reference external" href="http://tablesgenerator.com">TablesGenerator.com</a></strong> online tool to export LATEX code for tabulars.</p>
+<p>Creating tables in LaTeX can be time-consuming so you may want to use the <strong><a class="reference external" href="http://tablesgenerator.com">TablesGenerator.com</a></strong> online tool to export LaTeX code for tabulars.</p>
 </div>
 <p>The following examples show how to create tables in LaTeX, including the addition of lines (rules) and captions.</p>
 <section id="creating-a-basic-table-in-latex">
@@ -855,7 +841,8 @@ E=m
 </div>
 <p>This example produces the following output:</p>
 <a class="reference internal image-reference" href="https://images.ctfassets.net/nrgyaltdicpt/5K46QavbKv9vF4RI1GbUf2/f22d4f8a06d00251166f86d2c891321e/LL30Fig17-plain.svg"><img alt="https://images.ctfassets.net/nrgyaltdicpt/5K46QavbKv9vF4RI1GbUf2/f22d4f8a06d00251166f86d2c891321e/LL30Fig17-plain.svg" class="align-center" src="https://images.ctfassets.net/nrgyaltdicpt/5K46QavbKv9vF4RI1GbUf2/f22d4f8a06d00251166f86d2c891321e/LL30Fig17-plain.svg" width="50%" /></a>
-<p>The <code class="docutils literal notranslate"><span class="pre">tabular</span></code> environment is the default LATEX method to create tables. You must specify a parameter to this environment, in this case <code class="docutils literal notranslate"><span class="pre">{c</span> <span class="pre">c</span> <span class="pre">c}</span></code> which advises LATEX that there will be three columns and the text inside each one must be centred. You can also use <code class="docutils literal notranslate"><span class="pre">r</span></code> to right-align the text and <code class="docutils literal notranslate"><span class="pre">l</span></code> to left-align it. The alignment symbol &amp; is used to demarcate individual table cells within a table row. To end a table row use the <em>new line</em> command <code class="docutils literal notranslate"><span class="pre">\\</span></code>. Our table is contained within a center environment to make it centred within the text width of the page.</p>
+<hr class="docutils" />
+<p>The <code class="docutils literal notranslate"><span class="pre">tabular</span></code> environment is the default LaTeX method to create tables. You must specify a parameter to this environment, in this case <code class="docutils literal notranslate"><span class="pre">{c</span> <span class="pre">c</span> <span class="pre">c}</span></code> which advises LaTeX that there will be three columns and the text inside each one must be centred. You can also use <code class="docutils literal notranslate"><span class="pre">r</span></code> to right-align the text and <code class="docutils literal notranslate"><span class="pre">l</span></code> to left-align it. The alignment symbol &amp; is used to demarcate individual table cells within a table row. To end a table row use the <em>new line</em> command <code class="docutils literal notranslate"><span class="pre">\\</span></code>. Our table is contained within a center environment to make it centred within the text width of the page.</p>
 <section id="adding-borders">
 <h4>Adding borders<a class="headerlink" href="#adding-borders" title="Permalink to this headline">#</a></h4>
 <p>The tabular environment supports horizontal and vertical lines (rules) as part of the table:</p>
@@ -1153,14 +1140,14 @@ This example produces the following output:
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-lists">Ordered lists</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#captions-labels-and-references">Captions, labels and references</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subfigures">Subfigures</a></li>
-</ul>
-</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#math-equations">Math Equations</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inline-math-mode">Inline math mode</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#display-math-mode">Display math mode</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#figures">Figures</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#captions-labels-and-references">Captions, labels and references</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#subfigures">Subfigures</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a><ul class="nav section-nav flex-column">
