@@ -22,7 +22,11 @@ chapters:
   #   - file: github
   #   - file: markdown
   #   - file: xml
-# - file: git
 # - file: docker
-# - file: bash
 - file: latex
+- file: shell
+- file: ssh
+- file: git
+- file: github
+- file: github_pages
+
