@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Shell &#8212; My sample book</title>
+    <title>Github &#8212; My sample book</title>
   
   
   
@@ -60,9 +60,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'bash';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'github';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Github Pages" href="github_pages.html" />
+    <link rel="prev" title="Git" href="git.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -153,8 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell.html">Shell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ssh.html">Secure Shell (SSH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github_pages.html">Github Pages</a></li>
 </ul>
 
     </div>
@@ -209,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/bash.ipynb" target="_blank"
+      <li><a href="_sources/github.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -219,7 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -291,7 +298,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Shell</h1>
+    <h1>Github</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -301,20 +308,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-directory-contents"><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-long-listing-format"><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-include-directory-entries-whose-names-begin-with-a-dot"><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order"><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-change-directory"><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directory"><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-up-one-directory"><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-print-working-directory"><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-locate-a-program-file-in-the-user-s-path"><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nano-text-editor"><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ssh-key-to-github">Add SSH key to GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-use-a-repository">Create and use a repository</a></li>
 </ul>
             </nav>
         </div>
@@ -326,38 +321,49 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="shell">
-<h1>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">#</a></h1>
-<p>Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.</p>
-<section id="ls-list-directory-contents">
-<h2><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents<a class="headerlink" href="#ls-list-directory-contents" title="Permalink to this headline">#</a></h2>
-<section id="l-long-listing-format">
-<h3><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format<a class="headerlink" href="#l-long-listing-format" title="Permalink to this headline">#</a></h3>
+  <a class="reference internal image-reference" href="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"><img alt="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" class="align-right" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" style="width: 20%;" /></a>
+<section class="tex2jax_ignore mathjax_ignore" id="github">
+<h1>Github<a class="headerlink" href="#github" title="Permalink to this headline">#</a></h1>
+<p>GitHub is a code hosting platform for version control and and social network for collaboration. It lets you and others work together on projects from anywhere.</p>
+<section id="add-ssh-key-to-github">
+<h2>Add SSH key to GitHub<a class="headerlink" href="#add-ssh-key-to-github" title="Permalink to this headline">#</a></h2>
+<a class="reference internal image-reference" href="https://docs.github.com/assets/cb-65929/mw-1440/images/help/settings/userbar-account-settings.webp"><img alt="https://docs.github.com/assets/cb-65929/mw-1440/images/help/settings/userbar-account-settings.webp" class="align-right" src="https://docs.github.com/assets/cb-65929/mw-1440/images/help/settings/userbar-account-settings.webp" style="width: 35%;" /></a>
+<p>Go to your GitHub account settings and click on SSH and GPG keys. Then click on New SSH key. Give a title to your key (ideally this should be something like Macbook 2023) and paste the key in the box below. Click on Add SSH key.</p>
+<ol class="arabic simple">
+<li><p>Copy the SSH public key to your clipboard. If your SSH public key file has a different name than the example code, modify the filename to match your current setup. When copying your key, don’t add any newlines or whitespace.  <br/> <br/></p></li>
+<li><p>In the upper-right corner of any page, click your profile photo, then click Settings. <br/> <br/></p></li>
+<li><p>In the “Access” section of the sidebar, click  <strong>SSH and GPG keys</strong>. <br/> <br/></p></li>
+<li><p>Click <strong>New SSH key</strong> or <strong>Add SSH key</strong>. <br/> <br/></p></li>
+<li><p>In the “Title” field, add a descriptive label for the new key. For example, if you’re using a personal laptop, you might call this key “Personal laptop”. <br/> <br/></p></li>
+<li><p>In the “Key” field, paste your public key. <br/> <br/></p></li>
+<li><p>Click <strong>Add SSH key</strong>.</p></li>
+</ol>
+<img alt="_images/ssh_key.png" src="_images/ssh_key.png" />
 </section>
-<section id="a-include-directory-entries-whose-names-begin-with-a-dot">
-<h3><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).<a class="headerlink" href="#a-include-directory-entries-whose-names-begin-with-a-dot" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order">
-<h3><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.<a class="headerlink" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="cd-change-directory">
-<h2><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory<a class="headerlink" href="#cd-change-directory" title="Permalink to this headline">#</a></h2>
-<section id="home-directory">
-<h3><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory<a class="headerlink" href="#home-directory" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="back-up-one-directory">
-<h3><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory<a class="headerlink" href="#back-up-one-directory" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="pwd-print-working-directory">
-<h2><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory<a class="headerlink" href="#pwd-print-working-directory" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="which-locate-a-program-file-in-the-user-s-path">
-<h2><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path<a class="headerlink" href="#which-locate-a-program-file-in-the-user-s-path" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="nano-text-editor">
-<h2><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor<a class="headerlink" href="#nano-text-editor" title="Permalink to this headline">#</a></h2>
+<section id="create-and-use-a-repository">
+<h2>Create and use a repository<a class="headerlink" href="#create-and-use-a-repository" title="Permalink to this headline">#</a></h2>
+<p>Make changes to a file and push them to GitHub as commits
+Open and merge a pull request
+To complete this tutorial, you need a GitHub account and Internet access. You don’t need to know how to code, use the command line, or install Git (the version control software that GitHub is built on). If you have a question about any of the expressions used in this guide, head on over to the glossary to find out more about our terminology.</p>
+<p>A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs. Often, repositories include a README file, a file with information about your project. README files are written in the plain text Markdown language. You can use this cheat sheet to get started with Markdown syntax. GitHub lets you add a README file at the same time you create your new repository. GitHub also offers other common options such as a license file, but you do not have to select any of them now.</p>
+<p>Your <code class="docutils literal notranslate"><span class="pre">hello-world</span></code> repository can be a place where you store ideas, resources, or even share and discuss things with others.</p>
+<ol class="arabic simple">
+<li><p>In the upper-right corner of any page, use the  drop-down menu, and select <strong>New repository</strong>.</p></li>
+</ol>
+<a class="reference internal image-reference" href="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp"><img alt="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp" class="align-center" src="https://docs.github.com/assets/cb-31554/mw-1440/images/help/repository/repo-create.webp" style="width: 35%;" /></a>
+<br/>
+<ol class="arabic simple" start="2">
+<li><p>Type a name for your repository, and an optional description.</p></li>
+</ol>
+<a class="reference internal image-reference" href="https://docs.github.com/assets/cb-61138/mw-1440/images/help/repository/create-repository-name.webp"><img alt="https://docs.github.com/assets/cb-61138/mw-1440/images/help/repository/create-repository-name.webp" class="align-center" src="https://docs.github.com/assets/cb-61138/mw-1440/images/help/repository/create-repository-name.webp" style="width: 80%;" /></a>
+<br/>
+<ol class="arabic simple" start="3">
+<li><p>Choose <em>Public</em> for repository visibility.</p></li>
+</ol>
+<br/>
+<ol class="arabic simple" start="4">
+<li><p>Click <strong>Create repository</strong>.</p></li>
+</ol>
 </section>
 </section>
 
@@ -392,6 +398,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="git.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Git</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="github_pages.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Github Pages</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -410,20 +434,8 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-directory-contents"><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-long-listing-format"><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-include-directory-entries-whose-names-begin-with-a-dot"><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order"><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-change-directory"><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directory"><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-up-one-directory"><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-print-working-directory"><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-locate-a-program-file-in-the-user-s-path"><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nano-text-editor"><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#add-ssh-key-to-github">Add SSH key to GitHub</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-and-use-a-repository">Create and use a repository</a></li>
 </ul>
   </nav></div>
 

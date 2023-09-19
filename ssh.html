@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Shell &#8212; My sample book</title>
+    <title>Secure Shell (SSH) &#8212; My sample book</title>
   
   
   
@@ -60,9 +60,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'bash';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ssh';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Git" href="git.html" />
+    <link rel="prev" title="Shell" href="shell.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="None"/>
   </head>
@@ -153,8 +155,13 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="latex.html">LaTeX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="shell.html">Shell</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Secure Shell (SSH)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="git.html">Git</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github.html">Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="github_pages.html">Github Pages</a></li>
 </ul>
 
     </div>
@@ -209,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/bash.ipynb" target="_blank"
+      <li><a href="_sources/ssh.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -219,7 +226,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -291,7 +298,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Shell</h1>
+    <h1>Secure Shell (SSH)</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -301,20 +308,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-directory-contents"><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-long-listing-format"><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-include-directory-entries-whose-names-begin-with-a-dot"><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order"><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-keys">SSH Keys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-you-already-have-an-ssh-key">Check if you already have an SSH key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-a-new-ssh-key-if-needed">Generate a new SSH key, if needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-ssh-key-to-your-clipboard">Copy the SSH key to your clipboard</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-change-directory"><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directory"><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-up-one-directory"><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-print-working-directory"><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-locate-a-program-file-in-the-user-s-path"><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nano-text-editor"><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor</a></li>
 </ul>
             </nav>
         </div>
@@ -326,38 +325,68 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="shell">
-<h1>Shell<a class="headerlink" href="#shell" title="Permalink to this headline">#</a></h1>
-<p>Shell is a program that takes commands from the keyboard and gives them to the operating system to perform.</p>
-<section id="ls-list-directory-contents">
-<h2><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents<a class="headerlink" href="#ls-list-directory-contents" title="Permalink to this headline">#</a></h2>
-<section id="l-long-listing-format">
-<h3><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format<a class="headerlink" href="#l-long-listing-format" title="Permalink to this headline">#</a></h3>
+  <a class="reference internal image-reference" href="https://cdn-icons-png.flaticon.com/512/5261/5261911.png"><img alt="https://cdn-icons-png.flaticon.com/512/5261/5261911.png" class="align-right" src="https://cdn-icons-png.flaticon.com/512/5261/5261911.png" style="width: 20%;" /></a>
+<section class="tex2jax_ignore mathjax_ignore" id="secure-shell-ssh">
+<h1>Secure Shell (SSH)<a class="headerlink" href="#secure-shell-ssh" title="Permalink to this headline">#</a></h1>
+<p>Just as HTTP is a protocol for unencrypted web traffic and HTTPS is a protocol for encrypted web traffic, SSH is a protocol for encrypted remote login and other secure network services.</p>
+<p>Using the SSH protocol, you can connect and authenticate to remote servers and services.</p>
+<p>In simple words, you can use SSH to access another computer over a network and execute commands on the other computer. All of this takes place in the command line, without needing a graphical interface. This is how most servers are administered.</p>
+<section id="ssh-keys">
+<h2>SSH Keys<a class="headerlink" href="#ssh-keys" title="Permalink to this headline">#</a></h2>
+<p>SSH keys are a way to identify trusted computers and communicate with them without involving passwords.</p>
+<p>SSH keys are two files that are generated together: a public key and a private key. The private key is kept on the computer you log in from, while the public key is shared with all the computers you want to log  communicate with.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Never share or upload your private SSH key!</p>
+</div>
+<a class="reference internal image-reference" href="_images/ssh.png"><img alt="_images/ssh.png" class="align-center" src="_images/ssh.png" style="width: 70%;" /></a>
+<section id="check-if-you-already-have-an-ssh-key">
+<h3>Check if you already have an SSH key<a class="headerlink" href="#check-if-you-already-have-an-ssh-key" title="Permalink to this headline">#</a></h3>
+<p>If you want to check if you already have an SSH key, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ls -al ~/.ssh
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span></code>: prints the contents of a directory
+<code class="docutils literal notranslate"><span class="pre">-a</span></code>: list all files in long format
+<code class="docutils literal notranslate"><span class="pre">-l</span></code>: use a long listing format
+<code class="docutils literal notranslate"><span class="pre">~/.ssh</span></code>: path to the ssh folder
+<code class="docutils literal notranslate"><span class="pre">~</span></code>: home directory
+<code class="docutils literal notranslate"><span class="pre">.ssh</span></code>: hidden ssh folder in your home directory</p>
+<p>If you see a file named <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code>, you already have an SSH key pair and you can skip the next step.</p>
+<p>The filename ending with <code class="docutils literal notranslate"><span class="pre">.pub</span></code> is your public key. The other file is the corresponding private key. If you don’t have these files (or you don’t even have a <code class="docutils literal notranslate"><span class="pre">.ssh</span></code> directory), you need to create them.</p>
 </section>
-<section id="a-include-directory-entries-whose-names-begin-with-a-dot">
-<h3><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).<a class="headerlink" href="#a-include-directory-entries-whose-names-begin-with-a-dot" title="Permalink to this headline">#</a></h3>
+<section id="generate-a-new-ssh-key-if-needed">
+<h3>Generate a new SSH key, if needed<a class="headerlink" href="#generate-a-new-ssh-key-if-needed" title="Permalink to this headline">#</a></h3>
+<p>SSH keys are generated using a command line tool called <code class="docutils literal notranslate"><span class="pre">ssh-keygen</span></code>. This tool is installed by default on most systems.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh-keygen -t ed25519 -C <span class="s2">&quot;your_email@example.com&quot;</span>
+    
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">-t</span></code>: the type of encryption to use</p>
+<p><code class="docutils literal notranslate"><span class="pre">ed25519</span></code>: the encryption type</p>
+<p><code class="docutils literal notranslate"><span class="pre">-C</span></code>: comment to help you identify the key</p>
+<p>Try the <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-al</span> <span class="pre">~/.ssh</span></code> command again to see your new SSH key.</p>
 </section>
-<section id="t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order">
-<h3><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.<a class="headerlink" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order" title="Permalink to this headline">#</a></h3>
+<section id="copy-the-ssh-key-to-your-clipboard">
+<h3>Copy the SSH key to your clipboard<a class="headerlink" href="#copy-the-ssh-key-to-your-clipboard" title="Permalink to this headline">#</a></h3>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+Mac</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pbcopy &lt; ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+Windows</label><div class="sd-tab-content docutils">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clip &lt; ~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now you can paste your public ssh key on the website you want to use it on.</p>
 </section>
-</section>
-<section id="cd-change-directory">
-<h2><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory<a class="headerlink" href="#cd-change-directory" title="Permalink to this headline">#</a></h2>
-<section id="home-directory">
-<h3><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory<a class="headerlink" href="#home-directory" title="Permalink to this headline">#</a></h3>
-</section>
-<section id="back-up-one-directory">
-<h3><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory<a class="headerlink" href="#back-up-one-directory" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="pwd-print-working-directory">
-<h2><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory<a class="headerlink" href="#pwd-print-working-directory" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="which-locate-a-program-file-in-the-user-s-path">
-<h2><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path<a class="headerlink" href="#which-locate-a-program-file-in-the-user-s-path" title="Permalink to this headline">#</a></h2>
-</section>
-<section id="nano-text-editor">
-<h2><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor<a class="headerlink" href="#nano-text-editor" title="Permalink to this headline">#</a></h2>
 </section>
 </section>
 
@@ -392,6 +421,24 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="shell.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Shell</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="git.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Git</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div></div>
   
 </div>
@@ -410,20 +457,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-list-directory-contents"><code class="docutils literal notranslate"><span class="pre">ls</span></code>: List Directory Contents</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-long-listing-format"><code class="docutils literal notranslate"><span class="pre">-l</span></code> : Long listing format</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-include-directory-entries-whose-names-begin-with-a-dot"><code class="docutils literal notranslate"><span class="pre">-a</span></code> : Include directory entries whose names begin with a dot (.).</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#t-sort-by-time-modified-most-recently-modified-first-before-sorting-the-operands-by-lexicographical-order"><code class="docutils literal notranslate"><span class="pre">-t</span></code> : Sort by time modified (most recently modified first) before sorting the operands by lexicographical order.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ssh-keys">SSH Keys</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#check-if-you-already-have-an-ssh-key">Check if you already have an SSH key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#generate-a-new-ssh-key-if-needed">Generate a new SSH key, if needed</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#copy-the-ssh-key-to-your-clipboard">Copy the SSH key to your clipboard</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cd-change-directory"><code class="docutils literal notranslate"><span class="pre">cd</span></code>: Change Directory</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#home-directory"><code class="docutils literal notranslate"><span class="pre">~</span></code>: Home Directory</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#back-up-one-directory"><code class="docutils literal notranslate"><span class="pre">..</span></code>: Back up one directory</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pwd-print-working-directory"><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: Print Working Directory</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#which-locate-a-program-file-in-the-user-s-path"><code class="docutils literal notranslate"><span class="pre">which</span></code>: Locate a program file in the user’s path</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nano-text-editor"><code class="docutils literal notranslate"><span class="pre">nano</span></code>: Text editor</a></li>
 </ul>
   </nav></div>
 
